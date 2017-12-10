@@ -1,0 +1,16 @@
+{
+  "title": "all",
+  "description": "",
+  "hits": 0,
+  "columns": [
+    "_source"
+  ],
+  "sort": [
+    "_score",
+    "desc"
+  ],
+  "version": 1,
+  "kibanaSavedObjectMeta": {
+    "searchSourceJSON": "{\"index\":\"tfg-uoc\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+  }
+}

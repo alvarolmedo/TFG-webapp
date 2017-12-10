@@ -1,0 +1,35 @@
+filebeat:
+  prospectors:
+    - input_type: log
+      paths:
+        - /hostfs/home/docker/containers/*/*.log
+      document_type: docker
+      json.message_key: log
+      fields:
+        logzio_codec: plain
+        token: VDQqMxfNGHDgRKDxhajpItSGlRYJqppH
+      fields_under_root: true
+      encoding: utf-8
+      ignore_older: 3h
+    - input_type: log
+      paths:
+        - "/var/log/nginx/*.log"
+      document_type: nginx
+      fields:
+        logzio_codec: plain
+        token: VDQqMxfNGHDgRKDxhajpItSGlRYJqppH
+      fields_under_root: true
+      encoding: utf-8
+      ignore_older: 3h
+############################# Output ##########################################
+output:
+  logstash:
+    hosts: ["listener.logz.io:5015"]
+    
+#  The below configuration is used for Filebeat 1.3 or lower
+    tls:
+      certificate_authorities: ['/etc/pki/tls/certs/COMODORSADomainValidationSecureServerCA.crt']
+      
+#  The below configuration is used for Filebeat 5.0 or higher      
+    ssl:
+      certificate_authorities: ['/etc/pki/tls/certs/COMODORSADomainValidationSecureServerCA.crt']
