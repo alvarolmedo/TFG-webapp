@@ -53,9 +53,3 @@ networks:
      config:
        - subnet: 192.168.0.0/24
          gateway: 192.168.0.1
-  oam:
-    driver: "bridge"
-    ipam:
-     config:
-       - subnet: 172.16.0.0/16
-         gateway: 172.16.0.1
