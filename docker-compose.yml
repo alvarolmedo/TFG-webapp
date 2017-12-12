@@ -12,8 +12,8 @@ services:
       - $PWD/nginx.conf:/etc/nginx/nginx.conf:ro
       - $PWD/nginx-logs:/var/log/nginx
     networks:
-      bridge:
-        ipv4_address: 172.16.0.3
+      oam:
+        ipv4_address: 172.16.0.5
       private:
         ipv4_address: 192.168.0.2
 
@@ -42,7 +42,7 @@ services:
     volumes_from:
       - nginx
     networks:
-      bridge:
+      oam:
         ipv4_address: 172.16.0.4
 
 
@@ -53,7 +53,7 @@ networks:
      config:
        - subnet: 192.168.0.0/24
          gateway: 192.168.0.1
-  bridge:
+  oam:
     driver: "bridge"
     ipam:
      config:
