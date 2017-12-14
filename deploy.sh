@@ -15,5 +15,5 @@ echo "=============================="
 echo "== Importing kibana objects =="
 echo "=============================="
 
-cd kibana-data
+cd kibana-objects
 ./kibana-importer.py --json everything.json --kibana-url http://172.16.0.1:5601
