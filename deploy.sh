@@ -1,5 +1,9 @@
+#!/bin/bash
 
-#starting
+echo "======================"
+echo "== Deploying webapp =="
+echo "======================"
+
 docker-compose up -d
 
 echo "==========================="
