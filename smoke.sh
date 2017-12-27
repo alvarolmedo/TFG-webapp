@@ -14,3 +14,13 @@ else
 	echo Fail in nginx
 	exit 1
 fi
+
+HTTP_CODE=`curl -s -o /dev/null -w "%{http_code}"  http://192.168.0.1`
+if [ $HTTP_CODE == '200' ];then
+	echo
+	echo OK
+else
+	echo
+	echo Fail in nginx
+	exit 1
+fi
