@@ -31,19 +31,6 @@ services:
       private:
         ipv4_address: 192.168.0.4
 
-  filebeat:
-    container_name: filebeat
-    image: docker.elastic.co/beats/filebeat:6.0.0
-    restart: always
-    volumes:
-      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
-    volumes_from:
-      - nginx
-    networks:
-      private:
-        ipv4_address: 192.168.0.5
-
-
 networks:
   private:
     driver: "bridge"
