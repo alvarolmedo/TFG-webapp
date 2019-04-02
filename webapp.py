@@ -10,7 +10,7 @@ start = int(round(time.time()))
 
 @app.route("/")
 def webapp():
-    return "Hello UOC! \n Running by container %s" %socket.gethostname()
+    return "Hello user! \n Running by container %s" %socket.gethostname()
 
 if __name__ == '__main__':
     parser = optparse.OptionParser(usage="python webapp.py -p ")
