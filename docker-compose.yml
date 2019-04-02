@@ -16,7 +16,7 @@ services:
 
   web1:
     container_name: web_node1
-    image: registryuoc:5050/webapp:latest
+    image: registrydemo:5050/webapp:latest
     restart: always
     networks:
       private:
@@ -24,7 +24,7 @@ services:
 
   web2:
     container_name: web_node2
-    image: registryuoc:5050/webapp:latest
+    image: registrydemo:5050/webapp:latest
     restart: always
     networks:
       private:

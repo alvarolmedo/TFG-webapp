@@ -2,7 +2,7 @@
 
 export IMAGE="webapp"
 export TAG="latest"
-export REGISTRY="registryuoc:5050"
+export REGISTRY="registrydemo:5050"
 
 docker build -t ${IMAGE}:${TAG} ./
 echo "============================================================="
